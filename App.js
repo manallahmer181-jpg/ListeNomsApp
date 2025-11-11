@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, FlatList, Button, StyleSheet } from 'react-native';
 
-// 🔹 Composant enfant qui reçoit la liste via les props
+
 const ListeNoms = ({ noms }) => {
   return (
     <FlatList
@@ -14,7 +14,7 @@ const ListeNoms = ({ noms }) => {
   );
 };
 
-// 🔹 Composant principal
+
 const App = () => {
   const [noms, setNoms] = useState([
     { id: 1, nom: 'Manal' },
@@ -22,7 +22,7 @@ const App = () => {
    
   ]);
 
-  // Fonction pour ajouter un nouveau nom
+ 
   const ajouterNom = () => {
     const nouveauNom = { id: noms.length + 1, nom: `Nom ${noms.length + 1}` };
     setNoms([...noms, nouveauNom]);
